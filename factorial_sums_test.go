@@ -100,10 +100,7 @@ func TestLargeFactorials(t *testing.T) {
 	}
 }
 
-// Original test case has 25,302 as upper bound, but 25,302! has over 100,000 digits (100,423 by Stirling's)
-// By Stirling's, 25,205! has 99,996 digits and 25206! has 100001 digits
-// So upper bound is actually 25,205
-// Computationally expensive, so for now just make sure isn't recognized as out of bounds (-2)
+
 func TestTopBoundary(t *testing.T) {
 	result, err := GetFactorialSums(25205)
 	if err != nil {
